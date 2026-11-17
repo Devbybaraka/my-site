@@ -403,6 +403,9 @@ ol {
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
+.mobile-menu[hidden] {
+  display: none;
+}
 .mobile-menu a {
   padding: 0.85rem 0;
   font-size: 1.15rem;
