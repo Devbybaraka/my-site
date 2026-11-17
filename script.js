@@ -364,13 +364,13 @@
         .join('\n');
 
       window.location.href =
-        'mailto:hello@devbybaraka.com?subject=' +
+        'mailto:devbybaraka@gmail.com?subject=' +
         encodeURIComponent(subject) +
         '&body=' +
         encodeURIComponent(body);
 
       if (status) {
-        status.textContent = 'Opening your email app — if nothing happens, write to hello@devbybaraka.com.';
+        status.textContent = 'Opening your email app — if nothing happens, write to devbybaraka@gmail.com.';
       }
     });
   }
