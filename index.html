@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Newton Baraka — Product Engineer &amp; Web Developer</title>
+    <meta
+      name="description"
+      content="Newton Baraka is a product engineer building fast, accessible web products — from the first wireframe to the last deploy. Selected work, services and contact."
+    />
+    <meta name="author" content="Newton Baraka" />
+    <meta name="theme-color" content="#08080a" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Newton Baraka — Product Engineer &amp; Web Developer" />
+    <meta
+      property="og:description"
+      content="Fast, accessible web products, designed and built end to end. Selected work, services and contact."
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300..700;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor__dot"></span>
+      <span class="cursor__ring"></span>
+    </div>
+
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a class="brand" href="#top" aria-label="Newton Baraka, home">
+          <span class="brand__mark" aria-hidden="true">NB</span>
+          <span class="brand__text">
+            <span class="brand__name">Newton Baraka</span>
+            <span class="brand__role">Product Engineer</span>
+          </span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#work" data-nav>Work</a>
+          <a href="#about" data-nav>About</a>
+          <a href="#services" data-nav>Services</a>
+          <a href="#contact" data-nav>Contact</a>
+        </nav>
+
+        <div class="nav__actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
+            <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6" />
+            </svg>
+            <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 14.4A8.6 8.6 0 0 1 9.6 4a8.6 8.6 0 1 0 10.4 10.4Z" />
+            </svg>
+          </button>
+          <a class="btn btn--sm btn--ghost nav__cta" href="#contact">Let’s talk</a>
+          <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <a href="#work" data-menu-link>Work</a>
+        <a href="#about" data-menu-link>About</a>
+        <a href="#services" data-menu-link>Services</a>
+        <a href="#contact" data-menu-link>Contact</a>
+        <a class="mobile-menu__email" href="mailto:hello@devbybaraka.com">hello@devbybaraka.com</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ── Hero ─────────────────────────────────────────────── -->
+      <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true">
+          <div class="aurora aurora--a"></div>
+          <div class="aurora aurora--b"></div>
+          <div class="aurora aurora--c"></div>
+          <div class="hero__grid"></div>
+          <div class="grain"></div>
+        </div>
+
+        <div class="container hero__inner">
+          <p class="eyebrow" data-reveal>
+            <span class="status-dot" aria-hidden="true"></span>
+            Available for select projects — 2026
+          </p>
+
+          <h1 class="hero__title">
+            <span class="hero__line"><span data-reveal-line>Newton</span></span>
+            <span class="hero__line"><span data-reveal-line class="hero__surname">Baraka</span></span>
+          </h1>
+
+          <div class="hero__meta">
+            <p class="hero__lede" data-reveal>
+              I design and build fast, accessible web products — from the first
+              wireframe to the last deploy. Eight years turning complicated ideas
+              into interfaces that feel obvious.
+            </p>
+
+            <div class="hero__cta" data-reveal>
+              <a class="btn btn--primary" href="#work" data-magnetic>
+                View selected work
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn btn--ghost" href="#contact" data-magnetic>Get in touch</a>
+            </div>
+          </div>
+
+          <dl class="hero__facts" data-reveal>
+            <div>
+              <dt>Based in</dt>
+              <dd>Nairobi, Kenya <span class="dim">·</span> <span id="localTime" class="mono">--:--</span></dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Product engineering &amp; front-end systems</dd>
+            </div>
+            <div>
+              <dt>Working with</dt>
+              <dd>Founders, product teams, studios</dd>
+            </div>
+          </dl>
+        </div>
+
+        <a class="scroll-hint" href="#work" aria-label="Scroll to work">
+          <span class="scroll-hint__line" aria-hidden="true"></span>
+          <span>Scroll</span>
+        </a>
+      </section>
+
+      <!-- ── Marquee ──────────────────────────────────────────── -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>TypeScript</span><i></i><span>React &amp; Next.js</span><i></i><span>Node.js</span><i></i>
+          <span>Design systems</span><i></i><span>PostgreSQL</span><i></i><span>Go</span><i></i>
+          <span>Cloudflare Workers</span><i></i><span>Accessibility</span><i></i><span>Performance</span><i></i>
+          <span>TypeScript</span><i></i><span>React &amp; Next.js</span><i></i><span>Node.js</span><i></i>
+          <span>Design systems</span><i></i><span>PostgreSQL</span><i></i><span>Go</span><i></i>
+          <span>Cloudflare Workers</span><i></i><span>Accessibility</span><i></i><span>Performance</span><i></i>
+        </div>
+      </div>
+
+      <!-- ── Stats ────────────────────────────────────────────── -->
+      <section class="stats">
+        <div class="container stats__grid">
+          <div class="stat" data-reveal>
+            <span class="stat__value"><span data-count="8">0</span><em>+</em></span>
+            <span class="stat__label">Years building for the web</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__value"><span data-count="46">0</span></span>
+            <span class="stat__label">Products shipped to production</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__value"><span data-count="99">0</span><em>.9</em></span>
+            <span class="stat__label">Median Lighthouse performance</span>
+          </div>
+          <div class="stat" data-reveal>
+            <span class="stat__value"><span data-count="12">0</span></span>
+            <span class="stat__label">Teams I’ve embedded with</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Work ─────────────────────────────────────────────── -->
+      <section class="section" id="work">
+        <div class="container">
+          <header class="section__head">
+            <div>
+              <p class="kicker" data-reveal>01 — Selected work</p>
+              <h2 class="section__title" data-reveal>
+                Things I’ve built,<br />
+                <span class="serif">and what they did</span>
+              </h2>
+            </div>
+            <p class="section__note" data-reveal>
+              Six projects that show the range: product surfaces, marketing
+              sites, tooling and the systems underneath. Every one shipped.
+            </p>
+          </header>
+
+          <div class="filters" role="tablist" aria-label="Filter projects" data-reveal>
+            <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" data-filter="product" role="tab" aria-selected="false">Product</button>
+            <button class="filter" data-filter="web" role="tab" aria-selected="false">Web</button>
+            <button class="filter" data-filter="tooling" role="tab" aria-selected="false">Tooling</button>
+          </div>
+
+          <div class="work" id="workGrid">
+            <article class="card card--feature" data-tags="product web" data-reveal>
+              <a class="card__link" href="#contact" aria-label="Atlas — analytics for climate teams. Ask about this project.">
+                <div class="card__art card__art--atlas" aria-hidden="true">
+                  <div class="art__bars"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+                  <div class="art__glow"></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__top">
+                    <span class="pill">Product · Web app</span>
+                    <span class="card__year">2026</span>
+                  </div>
+                  <h3 class="card__title">Atlas</h3>
+                  <p class="card__desc">
+                    A climate-intelligence dashboard that turns millions of sensor
+                    readings into decisions a city can act on. Streamed data,
+                    sub-second filtering, and a chart layer built from scratch.
+                  </p>
+                  <ul class="card__tags"><li>TypeScript</li><li>Next.js</li><li>D3</li><li>PostgreSQL</li></ul>
+                  <p class="card__metric"><strong>3.4×</strong> faster time-to-insight in usability tests</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="card" data-tags="product" data-reveal>
+              <a class="card__link" href="#contact" aria-label="Ledgerline — invoicing for small studios. Ask about this project.">
+                <div class="card__art card__art--ledger" aria-hidden="true">
+                  <div class="art__sheet">
+                    <span></span><span></span><span></span><span class="is-accent"></span>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <div class="card__top">
+                    <span class="pill">Product</span>
+                    <span class="card__year">2025</span>
+                  </div>
+                  <h3 class="card__title">Ledgerline</h3>
+                  <p class="card__desc">
+                    B2B invoicing rebuilt around one screen: what you are owed,
+                    what is late, what to do next.
+                  </p>
+                  <ul class="card__tags"><li>React</li><li>Node</li><li>Stripe</li></ul>
+                  <p class="card__metric"><strong>−41%</strong> late payments</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="card" data-tags="web" data-reveal>
+              <a class="card__link" href="#contact" aria-label="Halcyon — hotel booking site. Ask about this project.">
+                <div class="card__art card__art--halcyon" aria-hidden="true">
+                  <div class="art__sun"></div>
+                  <div class="art__horizon"></div>
+                  <div class="art__arch"></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__top">
+                    <span class="pill">Web</span>
+                    <span class="card__year">2025</span>
+                  </div>
+                  <h3 class="card__title">Halcyon</h3>
+                  <p class="card__desc">
+                    A booking experience for four boutique hotels that feels like
+                    checking in, not checking out.
+                  </p>
+                  <ul class="card__tags"><li>Astro</li><li>Sanity</li><li>Stripe</li></ul>
+                  <p class="card__metric"><strong>+38%</strong> direct bookings</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="card" data-tags="tooling" data-reveal>
+              <a class="card__link" href="#contact" aria-label="Nomad — local environment CLI. Ask about this project.">
+                <div class="card__art card__art--nomad" aria-hidden="true">
+                  <div class="term">
+                    <div class="term__bar"><i></i><i></i><i></i></div>
+                    <p><span class="term__prompt">~</span> nomad up</p>
+                    <p class="term__dim">▸ 6 services ready in 1.8s</p>
+                  </div>
+                </div>
+                <div class="card__body">
+                  <div class="card__top">
+                    <span class="pill">Tooling · Open source</span>
+                    <span class="card__year">2024</span>
+                  </div>
+                  <h3 class="card__title">Nomad</h3>
+                  <p class="card__desc">
+                    One command to boot a reproducible local stack. Written in Go,
+                    adopted by teams who were tired of “works on my machine”.
+                  </p>
+                  <ul class="card__tags"><li>Go</li><li>Docker</li><li>CLI</li></ul>
+                  <p class="card__metric"><strong>1.2k</strong> GitHub stars</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="card" data-tags="product" data-reveal>
+              <a class="card__link" href="#contact" aria-label="Pulse — design system. Ask about this project.">
+                <div class="card__art card__art--pulse" aria-hidden="true">
+                  <div class="art__swatches"><i></i><i></i><i></i><i></i></div>
+                  <div class="art__control"></div>
+                </div>
+                <div class="card__body">
+                  <div class="card__top">
+                    <span class="pill">Product · Design system</span>
+                    <span class="card__year">2024</span>
+                  </div>
+                  <h3 class="card__title">Pulse</h3>
+                  <p class="card__desc">
+                    A themeable component library and token pipeline that let a
+                    40-person team ship consistent UI without a design review.
+                  </p>
+                  <ul class="card__tags"><li>React</li><li>Tokens</li><li>Storybook</li></ul>
+                  <p class="card__metric"><strong>−60%</strong> UI rework</p>
+                </div>
+              </a>
+            </article>
+
+            <article class="card" data-tags="web" data-reveal>
+              <a class="card__link" href="#contact" aria-label="Fold — typeface specimen site. Ask about this project.">
+                <div class="card__art card__art--fold" aria-hidden="true">
+                  <span class="art__glyph">F</span>
+                  <span class="art__glyph art__glyph--ghost">old</span>
+                </div>
+                <div class="card__body">
+                  <div class="card__top">
+                    <span class="pill">Web · Type</span>
+                    <span class="card__year">2024</span>
+                  </div>
+                  <h3 class="card__title">Fold</h3>
+                  <p class="card__desc">
+                    A variable typeface and its specimen — a microsite where the
+                    letterforms are the interface.
+                  </p>
+                  <ul class="card__tags"><li>WebGL</li><li>Variable fonts</li></ul>
+                  <p class="card__metric"><strong>Awwwards</strong> Honourable mention</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── About ────────────────────────────────────────────── -->
+      <section class="section section--alt" id="about">
+        <div class="container about">
+          <div class="about__aside" data-reveal>
+            <div class="portrait">
+              <div class="portrait__glow" aria-hidden="true"></div>
+              <div class="portrait__mono" aria-hidden="true">NB</div>
+              <div class="portrait__chip portrait__chip--top">TypeScript</div>
+              <div class="portrait__chip portrait__chip--bottom">Design systems</div>
+              <div class="portrait__ring" aria-hidden="true"></div>
+            </div>
+            <ul class="socials">
+              <li><a href="https://github.com/Devbybaraka" target="_blank" rel="noopener noreferrer">GitHub <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a></li>
+              <li><a href="mailto:hello@devbybaraka.com">Email <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a></li>
+              <li><a href="https://www.linkedin.com/in/devbybaraka" target="_blank" rel="noopener noreferrer">LinkedIn <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg></a></li>
+            </ul>
+          </div>
+
+          <div class="about__main">
+            <p class="kicker" data-reveal>02 — About</p>
+            <h2 class="section__title" data-reveal>
+              I like the part where<br />
+              <span class="serif">it finally feels simple.</span>
+            </h2>
+
+            <div class="about__copy" data-reveal>
+              <p>
+                I started out writing interfaces for a small studio and never
+                stopped caring about the last five percent — the easing curve, the
+                empty state, the label that tells you what happened.
+              </p>
+              <p>
+                Today I work end to end: research and flows with the product team,
+                the design system in code, the API when it needs to exist, and the
+                launch. I am equally happy joining an existing engineering team
+                for a quarter or owning a whole build from zero.
+              </p>
+              <p>
+                I care about performance and accessibility because they are the
+                same thing as respect for the person on the other side of the
+                screen. I write TypeScript by default, reach for the simplest tool
+                that works, and document as I go.
+              </p>
+            </div>
+
+            <div class="skills" data-reveal>
+              <div class="skills__group">
+                <h3>Engineering</h3>
+                <ul>
+                  <li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li>
+                  <li>Go</li><li>PostgreSQL</li><li>GraphQL</li><li>Cloudflare Workers</li>
+                </ul>
+              </div>
+              <div class="skills__group">
+                <h3>Craft</h3>
+                <ul>
+                  <li>Design systems</li><li>Accessibility (WCAG 2.2)</li>
+                  <li>Web performance</li><li>Motion &amp; interaction</li>
+                  <li>Figma</li><li>Technical writing</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline" data-reveal>
+              <h3 class="timeline__head">Experience</h3>
+              <ol>
+                <li>
+                  <span class="timeline__period mono">2023 — Now</span>
+                  <div>
+                    <p class="timeline__role">Independent product engineer</p>
+                    <p class="timeline__org">Founders, product teams and studios</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="timeline__period mono">2020 — 2023</span>
+                  <div>
+                    <p class="timeline__role">Software engineer</p>
+                    <p class="timeline__org">Fathom Labs · analytics products</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="timeline__period mono">2018 — 2020</span>
+                  <div>
+                    <p class="timeline__role">Front-end engineer</p>
+                    <p class="timeline__org">Northwind Studio · brand &amp; web</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Services ─────────────────────────────────────────── -->
+      <section class="section" id="services">
+        <div class="container">
+          <header class="section__head">
+            <div>
+              <p class="kicker" data-reveal>03 — Services</p>
+              <h2 class="section__title" data-reveal>
+                How I can help
+              </h2>
+            </div>
+            <p class="section__note" data-reveal>
+              Most engagements are four to twelve weeks. Fixed scope, weekly
+              demos, no handover surprise.
+            </p>
+          </header>
+
+          <div class="services">
+            <article class="service" data-reveal>
+              <span class="service__num mono">01</span>
+              <h3>Product engineering</h3>
+              <p>
+                Taking a product from prototype to production: architecture,
+                implementation, testing and launch. I work inside your repo and
+                your rituals.
+              </p>
+              <ul><li>Web apps</li><li>APIs</li><li>Dashboards</li></ul>
+            </article>
+            <article class="service" data-reveal>
+              <span class="service__num mono">02</span>
+              <h3>Front-end systems</h3>
+              <p>
+                Design systems, component libraries and token pipelines that make
+                good UI the path of least resistance for your team.
+              </p>
+              <ul><li>Design systems</li><li>Accessibility</li><li>Performance</li></ul>
+            </article>
+            <article class="service" data-reveal>
+              <span class="service__num mono">03</span>
+              <h3>Marketing sites</h3>
+              <p>
+                Fast, editorial, animated sites that still score green on
+                Lighthouse. Designed and built by one person, so it stays coherent.
+              </p>
+              <ul><li>Design + build</li><li>CMS</li><li>Motion</li></ul>
+            </article>
+            <article class="service" data-reveal>
+              <span class="service__num mono">04</span>
+              <h3>Technical consulting</h3>
+              <p>
+                Architecture reviews, performance audits and a second opinion
+                before you commit a quarter to the wrong approach.
+              </p>
+              <ul><li>Audits</li><li>Reviews</li><li>Roadmaps</li></ul>
+            </article>
+          </div>
+
+          <div class="process" data-reveal>
+            <p class="process__label mono">The shape of a project</p>
+            <ol class="process__steps">
+              <li><span>01</span> Listen &amp; scope</li>
+              <li><span>02</span> Design in the browser</li>
+              <li><span>03</span> Build &amp; demo weekly</li>
+              <li><span>04</span> Ship &amp; hand over</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Testimonials ─────────────────────────────────────── -->
+      <section class="quotes">
+        <div class="container">
+          <figure class="quote" data-reveal>
+            <blockquote>
+              “The rare engineer who holds the whole thing in their head — the
+              interface, the API, the person using it. We shipped in half the time
+              and it looks twice as considered.”
+            </blockquote>
+            <figcaption>
+              <span class="quote__avatar" aria-hidden="true">LF</span>
+              <span>
+                <strong>Lena Fischer</strong>
+                <em>Founder, Atlas Climate</em>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="quote" data-reveal>
+            <blockquote>
+              “Every review ended with us removing something. I have never worked
+              with anyone so good at taking things away.”
+            </blockquote>
+            <figcaption>
+              <span class="quote__avatar" aria-hidden="true">CN</span>
+              <span>
+                <strong>Charlotte Ng</strong>
+                <em>Head of Product, Ledgerline</em>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ── Contact ──────────────────────────────────────────── -->
+      <section class="section section--contact" id="contact">
+        <div class="container contact">
+          <div class="contact__intro">
+            <p class="kicker" data-reveal>04 — Contact</p>
+            <h2 class="contact__title" data-reveal>
+              Let’s build<br />
+              <span class="serif">something good.</span>
+            </h2>
+            <p class="contact__lede" data-reveal>
+              Tell me what you are making and where it is stuck. I reply within
+              two working days, usually with questions.
+            </p>
+            <a class="contact__email" href="mailto:hello@devbybaraka.com" data-reveal>
+              hello@devbybaraka.com
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9" /></svg>
+            </a>
+            <p class="contact__avail" data-reveal>
+              <span class="status-dot" aria-hidden="true"></span>
+              Booking from March 2026
+            </p>
+          </div>
+
+          <form class="form" id="contactForm" novalidate data-reveal>
+            <div class="field">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Ada Lovelace" required />
+              <p class="field__error" data-error-for="name"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required />
+              <p class="field__error" data-error-for="email"></p>
+            </div>
+            <div class="field">
+              <label for="budget">Budget range</label>
+              <select id="budget" name="budget">
+                <option value="">Prefer not to say</option>
+                <option>Under $5k</option>
+                <option>$5k – $15k</option>
+                <option>$15k – $40k</option>
+                <option>$40k+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">About the project</label>
+              <textarea id="message" name="message" rows="5" placeholder="What are you building, and what would success look like?" required></textarea>
+              <p class="field__error" data-error-for="message"></p>
+            </div>
+            <button class="btn btn--primary btn--wide" type="submit">
+              Send message
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+            </button>
+            <p class="form__note">This form opens your email app with the message ready to send.</p>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="brand__mark" aria-hidden="true">NB</span>
+          <p>Newton Baraka — product engineer, Nairobi.</p>
+        </div>
+        <nav class="footer__links" aria-label="Footer">
+          <a href="#work">Work</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="https://github.com/Devbybaraka" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+        <p class="footer__meta mono">© <span id="year">2026</span> · Built by hand</p>
+      </div>
+      <div class="footer__wordmark" aria-hidden="true">NEWTON BARAKA</div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
